@@ -21,7 +21,11 @@ public class SearchService extends BaseServices{
         response = searchRequest(pathParam, q, sort.equals("any") ? null : sort,
                 order.equals("any") ? null : order);
     }
-
+    /** We get list of json objects
+     * Each element in map is a single json object
+     * Map<String, Integer> represents key and value combination
+     * List hold all the elements
+     * json path $ represents root object or array */
     public Integer numberOfStars() {
         List<Map<String, Integer>> jp = response.jsonPath().getList("items");
         return Integer.parseInt(String.valueOf(jp.get(0).get("stargazers_count")));
