@@ -13,11 +13,7 @@ Print latest release tag
 Verify latest release tag matches to expected release tag
 Verify release tag matches regex pattern.
 
-
-
-
-
-RepoServiceTest : https://docs.github.com/en/rest/reference/search
+SearchServiceTest : https://docs.github.com/en/rest/reference/search
 Test description : Get repository based on search query i.e language and sort by stars in desc order
 Base URI : https://api.github.com
 Base Path = search
@@ -37,8 +33,6 @@ Expected Number of stars should be greater that 122000
 Print Name of Top Repo
 Verify name of expected repo with actual repo
 
-
-
 Test Strategy:
 Using Rest Assured make sure i can test API easily in short amount of time.
 I have used Jsonpath to parse json response.
@@ -49,14 +43,10 @@ Each test has single responsibility and include a single assertion.
 Re-suabiity
 Base service can be extended for other endpoints
 
-
------
-
 POM.xml
 TestNG - Testing Framework
 Rest Assured - Automation testing tool for rest api endpiints.
 log4j - printing information
-
 
 testng.xml - Test runner for running both classes
 We can kick our test suite from command prompt 
