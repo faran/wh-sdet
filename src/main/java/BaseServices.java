@@ -11,16 +11,19 @@ import static org.hamcrest.Matchers.is;
 
 public class BaseServices{
 
+    /**Encapsulation for setting basepath accordingly.*/
     private String basePath = null;
 
+    /**basepath getter*/
     public String getBasePath() {
         return basePath;
     }
-
+    /**basepath setter*/
     public void setBasePath(String basePath) {
         this.basePath = basePath;
     }
 
+    /**Setting request specification*/
     public RequestSpecification requestSpec() {
 
         return new RequestSpecBuilder()
@@ -30,7 +33,7 @@ public class BaseServices{
                 .setBasePath(getBasePath())
                 .build();
     }
-
+    /**Setting response specification*/
     public ResponseSpecification responseSpec() {
 
         return new ResponseSpecBuilder()
@@ -39,6 +42,10 @@ public class BaseServices{
                 .build();
     }
 
+    /**Creating Search request
+     * Takes in 1 path param and 1 query parameter
+     * sort and order are optional
+     * return request*/
     public Response searchRequest(String pathParm, String q, String sort, String order) {
         RequestSpecification request = RestAssured
                 .given()
@@ -63,6 +70,9 @@ public class BaseServices{
                 .response();
     }
 
+    /**Creating repos request
+     * Takes in 2 path param
+     * return request*/
     public Response reposRequest(String owner,String reponame) {
         RequestSpecification request = RestAssured
                 .given()
