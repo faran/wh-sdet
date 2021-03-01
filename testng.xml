@@ -4,6 +4,7 @@
     <test name="Github Services Test">
         <classes>
             <class name="SearchServiceTest"/>
+            <class name="ReposServiceTest"/>
         </classes>
     </test>
 </suite>
