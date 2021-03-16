@@ -1,7 +1,4 @@
 import io.restassured.response.Response;
-import org.testng.annotations.BeforeSuite;
-import org.testng.annotations.Optional;
-import org.testng.annotations.Parameters;
 
 import java.util.List;
 import java.util.Map;
