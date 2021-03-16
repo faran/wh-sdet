@@ -14,13 +14,10 @@ public class SearchService extends BaseServices{
 
     private Response response;
 
-    @Parameters({"pathParam", "q", "sort", "order"})
-    @BeforeSuite
-    public void getAllRepos(@Optional("repositories") String pathParam, @Optional("user:faran")
-            String q, @Optional("any") String sort, @Optional("any") String order) {
+    public void getAllRepos(String pathParam, String q, String sort, String order) {
         response = searchRequest(pathParam, q, sort.equals("any") ? null : sort,
-                order.equals("any") ? null : order);
-    }
+            order.equals("any") ? null : order);
+}
     /** We get list of json objects
      * Each element in map is a single json object
      * Map<String, Integer> represents key and value combination
