@@ -14,9 +14,7 @@ public class ReposService extends BaseServices{
 
     private Response response;
 
-    @Parameters({"pathParam", "pathParam"})
-    @BeforeSuite
-    public void getAllRepos(@Optional("faran") String pathParam1,@Optional("faran-cv") String pathParam2) {
+    public void getAllRepos(String pathParam1, String pathParam2) {
         response = reposRequest(pathParam1,pathParam2);
     }
 
